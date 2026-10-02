@@ -1,0 +1,19 @@
+-- Create Patient Table
+CREATE TABLE Patient (
+    patient_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    date_of_birth DATE NOT NULL,
+    gender VARCHAR(10),
+    phone_number VARCHAR(15),
+    email VARCHAR(100),
+    primary_provider_id INT,
+    FOREIGN KEY (primary_provider_id) REFERENCES Provider(provider_id) ON DELETE SET NULL
+);
+
+-- Insert Sample Data
+INSERT INTO Patient (first_name, last_name, date_of_birth, gender, phone_number, email, primary_provider_id) 
+VALUES 
+('John', 'Doe', '1985-05-12', 'Male', '555-1234', 'john.doe@email.com', 2),
+('Jane', 'Smith', '1990-08-23', 'Female', '555-5678', 'jane.smith@email.com', 1),
+('Robert', 'Johnson', '1962-11-03', 'Male', '555-9012', 'r.johnson@email.com', 2);
