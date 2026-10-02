@@ -10,10 +10,3 @@ CREATE TABLE Patient (
     primary_provider_id INT,
     FOREIGN KEY (primary_provider_id) REFERENCES Provider(provider_id) ON DELETE SET NULL
 );
-
--- Insert Sample Data
-INSERT INTO Patient (first_name, last_name, date_of_birth, gender, phone_number, email, primary_provider_id) 
-VALUES 
-('John', 'Doe', '1985-05-12', 'Male', '555-1234', 'john.doe@email.com', 2),
-('Jane', 'Smith', '1990-08-23', 'Female', '555-5678', 'jane.smith@email.com', 1),
-('Robert', 'Johnson', '1962-11-03', 'Male', '555-9012', 'r.johnson@email.com', 2);
