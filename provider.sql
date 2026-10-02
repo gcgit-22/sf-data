@@ -1,6 +1,7 @@
 -- Create Provider Table
+
 CREATE TABLE Provider (
-    provider_id INT PRIMARY KEY AUTO_INCREMENT,
+    provider_id INT AUTOINCREMENT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     specialty VARCHAR(100),
